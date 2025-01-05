@@ -1,8 +1,9 @@
-from selenium.webdriver import Remote, ChromeOptions
-from selenium.webdriver.chromium.remote_connection import ChromiumRemoteConnection
+import os
+
 from bs4 import BeautifulSoup
 from dotenv import load_dotenv
-import os
+from selenium.webdriver import ChromeOptions, Remote
+from selenium.webdriver.chromium.remote_connection import ChromiumRemoteConnection
 
 load_dotenv()
 
@@ -26,8 +27,6 @@ def scrape_website(website):
         print("Navigated! Scraping page content...")
         html = driver.page_source
         return html
-
-
 
 
 def extract_body_content(html_content):
