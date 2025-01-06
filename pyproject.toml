@@ -11,6 +11,8 @@ beautifulsoup4 = "^4.12.3"
 selenium = "^4.27.1"
 openai = "^1.59.3"
 boto3 = "^1.35.92"
+telethon = "^1.38.1"
+google = "^3.0.0"
 
 [tool.poetry.group.local]
 optional = true

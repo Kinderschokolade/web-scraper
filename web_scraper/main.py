@@ -3,7 +3,7 @@ from datetime import datetime
 
 import boto3
 from parse import parse_with_cloud_llm
-from scrape import (
+from scrape_web import (
     clean_body_content,
     extract_body_content,
     scrape_website,

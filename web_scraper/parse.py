@@ -1,11 +1,13 @@
 import os
 import pathlib
-
+from dotenv import load_dotenv
 from llama_cpp import Llama
 from openai import OpenAI
 
 template = "You are tasked with summarizing information from the following news content: {dom_content}. "
 
+
+load_dotenv()
 
 openai_client = OpenAI(
     api_key=os.getenv("OPENAI_TOKEN"),
@@ -44,7 +46,7 @@ def parse_with_local_llm(dom_chunks, parse_description):
 
     model = Llama(
         model_path=str(zephyr_path),
-        n_gpu_layers=-1,  # Uncomment to use GPU acceleration
+        n_gpu_layers=-1,  # use GPU acceleration
         # seed=1337, # Uncomment to set a specific seed
         # n_ctx=2048, # Uncomment to increase the context window
     )
