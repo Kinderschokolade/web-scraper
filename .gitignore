@@ -3,3 +3,5 @@ chromedriver
 save.txt
 requirements.txt
 .env
+anon.session
+*.parquet
