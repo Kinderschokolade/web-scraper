@@ -2,6 +2,6 @@ __pycache__/**
 chromedriver
 save.txt
 requirements.txt
-.env
+**/.env
 anon.session
 *.parquet
